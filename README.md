@@ -13,14 +13,14 @@ o	/simulate_load
 •	docker tag monitored-app yourusername/monitored-app:latest
 •	docker push yourusername/monitored-app:latest
 📤 **Deliverable:** Docker image accessible at http://localhost:5000/health
-________________________________________
+
 🧾 **Initialize Version Control**
 ✅ **Steps:**
 •	Initialize a Git repository and add .gitignore
 •	Create main and monitoring branches
 •	Push all code to GitHub
 🔗 **Deliverable:** GitHub repository with both branches (main, monitoring)
-________________________________________
+
 📊 **Implement Metrics Collection (Prometheus)**
 ✅ **Steps:**
 •	Install prometheus_flask_exporter and expose app metrics
@@ -29,7 +29,7 @@ o	Flask app
 o	Node Exporter
 •	Run Prometheus and Node Exporter via Docker
 🌐 **Deliverable:** Prometheus running at http://localhost:9090
-________________________________________
+
 📁 **Set Up Centralized Logging (Loki + Promtail)**
 ✅ **Steps:**
 •	Add structured logging using structlog in the Flask app
@@ -39,7 +39,7 @@ o	Loki
 o	Promtail
 •	Verify logs appear in Loki UI
 🌐 **Deliverable:** Logs accessible at http://localhost:3100
-________________________________________
+
 📈 **Create Grafana Dashboards**
 ✅ **Steps:**
 •	Run Grafana via Docker:
@@ -52,14 +52,14 @@ o	🔥 CPU Usage
 o	⏱️ Request Latency
 o	📄 Application Logs
 🌐 **Deliverable:** Grafana dashboards at http://localhost:3000
-________________________________________
+
 🚨 **Configure Alerting (Prometheus + Alertmanager)**
 ✅ **Steps:**
 •	Create alert.rules.yml with conditions (e.g., CPU > 80%)
 •	Configure Alertmanager with SMTP/email settings
 •	Simulate CPU spike or downtime to trigger alerts
 📩 **Deliverable:** Email screenshots of triggered alerts
-________________________________________
+
 ⚙️ **Automate with CI/CD (GitHub Actions)**
 ✅ **Steps:**
 •	Create workflow file: .github/workflows/ci-cd.yml
@@ -72,6 +72,7 @@ o	Docker image push
 📊 **Pipeline Diagram**
 
 <img width="1518" height="607" alt="Diagram" src="https://github.com/user-attachments/assets/cc87491e-fbf2-4b4c-a9ea-f8ad30dbc0c5" />
+
 
 
 
