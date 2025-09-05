@@ -2,7 +2,7 @@
 
 A simple and powerful **Dockerized monitoring solution** using **Prometheus**, **Loki**, **Alertmanager**, **Promtail**, and a custom **Python application** — all set up using **Docker Compose**.
 
-Ideal for developers, DevOps engineers, and SREs looking to monitor apps in real time with minimal setup.
+Ideal for developers, DevOps engineers, and SREs looking to monitor apps in real time with minimal setup
 
 
 🔍 **Features**
