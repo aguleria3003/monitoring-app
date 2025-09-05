@@ -71,7 +71,8 @@ o	Docker image push
 
 📊 **Pipeline Diagram**
 
+<img width="1518" height="607" alt="Diagram" src="https://github.com/user-attachments/assets/cc87491e-fbf2-4b4c-a9ea-f8ad30dbc0c5" />
 
-<img width="2363" height="1074" alt="image" src="https://github.com/user-attachments/assets/f8ed8859-873d-479e-9097-9e5c28297481" />
+
 
 
