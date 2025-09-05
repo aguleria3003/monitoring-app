@@ -1,4 +1,4 @@
-                                                                ****🚀 Monitoring App — All-in-One Monitoring Stack****
+                           ****🚀 Monitoring App — All-in-One Monitoring Stack****
 
 A simple and powerful **Dockerized monitoring solution** using **Prometheus**, **Loki**, **Alertmanager**, **Promtail**, and a custom **Python application** — all set up using **Docker Compose**.
 
