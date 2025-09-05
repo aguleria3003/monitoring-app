@@ -1,206 +1,77 @@
-&nbsp;    🔧 Automated Infrastructure Monitoring \& Alerting System
-
-
-
-A Complete DevOps Observability Pipeline Using Docker, Prometheus, Grafana, Loki \& CI/CD
-
-
-
-
-
-✅ **\*\*Steps:\*\***
-
-1\. Create a Python Flask app with `/health` and `/simulate\_load` endpoints.  
-
-2\. Write a `Dockerfile` using `python:3.11-slim` as the base image.  
-
-3\. Build locally:  
-
-&nbsp;  docker build -t monitored-app .
-
-
-
-
-
-**Test the container:**
-
-docker run -p 5000:5000 monitored-app
-
-
-
-**Push to Docker Hub:**
-
-docker tag monitored-app yourusername/monitored-app:latest
-
-docker push yourusername/monitored-app:latest
-
-
-
-📤 Deliverable: Docker image accessible at http://localhost:5000/health
-
-
-
-🧾**Initialize Version Control**
-
-
+🖥️ **Deploy a Flask-Based Web Application**
 
 ✅ **Steps:**
-
-
-
-Initialize Git and add .gitignore.
-
-
-
-Create main and monitoring branches.
-
-
-
-Push code to GitHub.
-
-
-
-🔗 **Deliverable: GitHub repository with both branches**
-
-
-
-📊 **Implement Metrics Collection**
-
-Goal: Collect metrics using Prometheus
-
-
-
-**✅ Steps:**
-
-
-
-Install prometheus\_flask\_exporter and expose metrics.
-
-
-
-Configure prometheus.yml to scrape the Flask app and Node Exporter.
-
-
-
-Run Prometheus and Node Exporter via Docker.
-
-
-
-🌐 Deliverable: Prometheus running at http://localhost:9090
-
-
-
-📁 **Set Up Logging**
-
-Goal: Centralized log management using Loki + Promtail
-
-
-
+•	Create a Python Flask app with:
+o	/health
+o	/simulate_load
+•	Write a Dockerfile using python:3.11-slim as the base image.
+•	Build locally:
+•	docker build -t monitored-app .
+•	Test the container:
+•	docker run -p 5000:5000 monitored-app
+•	Push to Docker Hub:
+•	docker tag monitored-app yourusername/monitored-app:latest
+•	docker push yourusername/monitored-app:latest
+📤 **Deliverable:** Docker image accessible at http://localhost:5000/health
+________________________________________
+🧾 **Initialize Version Control**
 ✅ **Steps:**
-
-
-
-Add structured logging to the Flask app using structlog.
-
-
-
-Set up docker-compose.yml for Loki, Promtail, and the app.
-
-
-
-Verify logs are collected.
-
-
-
-🌐 Deliverable: Logs accessible at http://localhost:3100
-
-
-
-📈 **Create Visualization Dashboards**
-
-Goal: View metrics and logs in Grafana
-
-
-
+•	Initialize a Git repository and add .gitignore
+•	Create main and monitoring branches
+•	Push all code to GitHub
+🔗 **Deliverable:** GitHub repository with both branches (main, monitoring)
+________________________________________
+📊 **Implement Metrics Collection (Prometheus)**
 ✅ **Steps:**
-
-
-
-Run Grafana via Docker:
-
-docker run -d -p 3000:3000 grafana/grafana
-
-Add Prometheus and Loki as data sources.
-
-
-
-Create dashboards for:
-
-
-
-CPU Usage
-
-
-
-Request Latency
-
-
-
-App Logs
-
-
-
-🌐 Deliverable: Grafana at http://localhost:3000
-
-
-
-🚨 **Configure Alerting**
-
-Goal: Get notified for high CPU or downtime
-
-
-
+•	Install prometheus_flask_exporter and expose app metrics
+•	Create prometheus.yml to scrape:
+o	Flask app
+o	Node Exporter
+•	Run Prometheus and Node Exporter via Docker
+🌐 **Deliverable:** Prometheus running at http://localhost:9090
+________________________________________
+📁 **Set Up Centralized Logging (Loki + Promtail)**
 ✅ **Steps:**
-
-
-
-Define alert rules in alert.rules.yml (e.g., CPU > 80%).
-
-
-
-Set up Alertmanager with email configurations.
-
-
-
-Test alerts by simulating load.
-
-
-
-📩 Deliverable: Alert email screenshots
-
-
-
-⚙️ **Automate with CI/CD**
-
-Goal: Automate builds and monitoring setup
-
-
-
+•	Add structured logging using structlog in the Flask app
+•	Create docker-compose.yml with:
+o	Flask app
+o	Loki
+o	Promtail
+•	Verify logs appear in Loki UI
+🌐 **Deliverable:** Logs accessible at http://localhost:3100
+________________________________________
+📈 **Create Grafana Dashboards**
 ✅ **Steps:**
+•	Run Grafana via Docker:
+•	docker run -d -p 3000:3000 grafana/grafana
+•	Add data sources:
+o	Prometheus
+o	Loki
+•	Build dashboards for:
+o	🔥 CPU Usage
+o	⏱️ Request Latency
+o	📄 Application Logs
+🌐 **Deliverable:** Grafana dashboards at http://localhost:3000
+________________________________________
+🚨 **Configure Alerting (Prometheus + Alertmanager)**
+✅ **Steps:**
+•	Create alert.rules.yml with conditions (e.g., CPU > 80%)
+•	Configure Alertmanager with SMTP/email settings
+•	Simulate CPU spike or downtime to trigger alerts
+📩 **Deliverable:** Email screenshots of triggered alerts
+________________________________________
+⚙️ **Automate with CI/CD (GitHub Actions)**
+✅ **Steps:**
+•	Create workflow file: .github/workflows/ci-cd.yml
+•	Automate:
+o	Docker image build
+o	Docker image push
+•	(Optional) Add deployment steps for monitoring stack
+🔁 **Deliverable:** GitHub Actions pipeline with full CI/CD automation
+
+📊 **Pipeline Diagram**
 
 
+<img width="2363" height="1074" alt="image" src="https://github.com/user-attachments/assets/f8ed8859-873d-479e-9097-9e5c28297481" />
 
-Create .github/workflows/ci-cd.yml
-
-
-
-Automate Docker build + push
-
-
-
-Optionally deploy monitoring stack via Docker Compose or shell script
-
-
-
-🔁 Deliverable: Fully functional GitHub Actions CI/CD pipeline
 
